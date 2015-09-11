@@ -1,9 +1,8 @@
 body {
 }
 
-#myCarousel{
-    z-index: 1;
-}
+/* Prevent navbar from covering content*/
+@media (min-width: 981px) { body { padding-top: 60px; } }
 
 .starter-template {
   padding: 40px 15px;
@@ -14,21 +13,23 @@ body {
   color: #000000;
 }
 
-.navbar-inverse .navbar-nav>li>a.jf-link:hover{
+.navbar-inverse .navbar-nav>li>a.jf-link:hover {
     color: #2277AA;
 }
 
 .jf-navbar-item.jf-active{
-    // background-color: #333333;
+    /* background-color: #333333; */
     border: 2px solid;
     border-radius: 5px;
     border-color: #3388AA;
 }
 
+/*
 .jf-navbar-item{
     border: 2px solid;
     border-color: #FFFFFF;
 }
+*/
 
 .jf-debug{
     margin-bottom: 1px;
@@ -36,15 +37,16 @@ body {
 }
 
 .jf-navbar {
-   background: rgba(0.0,0.0,0.0,0.6);
+   background: rgba(253,253,255,1.0);
    padding-top: 15px;
    padding-bottom: 15px;
    border-bottom: 1px solid #585858;
-   background-color: #FFFFFF;
-   }
+}
 
 .jf-navbar-free {
-   background: rgba(0.0,0.0,0.0,0.9);
+   background: rgba(255,255,255,0.9);
+   padding-top: 15px;
+   padding-bottom: 15px;
    }
 
 .project-item {

@@ -33,11 +33,12 @@ $(function () {
 
         //Auto-highlight items on navbar 
         window_height = $(window).height()
-        contact_offset = $("a[name='bottom']").offset().top-window_height
-        proj_offset = $("a[name='projects']").offset().top-window_height
-        if( nav_offset >= contact_offset){
+        navbar_offset = 0
+        code_offset = $("a[name='code']").offset().top-navbar_offset
+        proj_offset = $("a[name='projects']").offset().top-navbar_offset
+        if( nav_offset >= code_offset){
             $(".jf-navbar-item").removeClass("jf-active");
-            $("#navbar_contact").addClass("jf-active");
+            $("#navbar_code").addClass("jf-active");
         }else if (nav_offset >= proj_offset){
             $(".jf-navbar-item").removeClass("jf-active");
             $("#navbar_projects").addClass("jf-active");
@@ -45,10 +46,9 @@ $(function () {
             $(".jf-navbar-item").removeClass("jf-active");
             $("#navbar_home").addClass("jf-active");
         }
-
         $("#navbar_offset").text(nav_offset)
         $("#navbar_projects_offset").text(proj_offset)
-        $("#navbar_contact_offset").text(contact_offset)
+        $("#navbar_code_offset").text(code_offset)
     });
 });
 
