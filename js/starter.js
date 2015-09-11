@@ -10,7 +10,7 @@ $(function () {
         //Control navbar at top of page vs free
         navbar = $(".navbar")
         nav_offset = navbar.offset().top
-        if (nav_offset>30) {
+        if (nav_offset>1) {
             if(!navbar_free){
                 $(".jf-navbar").addClass("jf-navbar-free");
                 $(".jf-navbar").animate({
