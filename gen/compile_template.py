@@ -7,7 +7,7 @@ def hello_world():
     new_soup = BeautifulSoup('<div> Hello World! </div>', "html.parser")
     return new_soup
 
-def project_template(title="Title", venue=None, image=None, description='', abstract=None, authors=None, links=None):
+def project_template(title="Title", venues=None, image=None, description='', abstract=None, authors=None, links=None):
     # Build links
     link_str = '<div class="project-links"> <ul>'
     for link_name, link_url in links:
@@ -30,8 +30,15 @@ def project_template(title="Title", venue=None, image=None, description='', abst
 
     # Build venue
     venue_str = ''
-    if venue:
-        venue_str = venue
+    if venues:
+        for i, venuelink in enumerate(venues):
+            venue, link = venuelink
+            if link:
+                venue_str += '<a href=%s>%s</a>' % (link, venue)
+            else:
+                venue_str += venue
+            if i < len(venues)-1:
+                venue_str += ', '
 
     # Build image
     image_str = ''

@@ -26,38 +26,40 @@
       <a name="top"></a>
       <div class="starter-template">
         <a name="about"></a>
-        <h1> About </h1>
-        <h3>TODO</h3>
-        <div class="pyp-template"> LOREM_IPSUM </div>
+        <h1> Justin Fu </h1>
+        <h3>TODO - formatting</h3>
+        <h3>TODO - picture</h3>
+        I am currently a Masters student in the <a href='http://www.cs.stanford.edu/'>CS department</a> at <a href='https://www.stanford.edu/'>Stanford University</a>. Before that, I completed my undergraduate degree in <a href='http://www.eecs.berkeley.edu/'>EECS</a> at <a href='http://www.berkeley.edu/'>UC Berkeley</a>, under the supervision of professor <a href='http://www.cs.berkeley.edu/~pabbeel/'>Pieter Abbeel</a>.
 
         <a name="pubs"></a>
         <hr>
-        <h2> Publications </h2>
+        <h3> Publications </h3>
         <hr>
 
         <div class="pyp-template"> 
             project_template(
                 title="One-Shot Learning of Manipulation Skills with Online Dynamics Adaptation and Neural Network Priors",
-                venue="NIPS 2015 Deep Reinforcement Learning Workshop; Under review for conference publication",
+                venues= [("NIPS 2015 Deep Reinforcement Learning Workshop", "http://rll.berkeley.edu/deeprlworkshop/"),
+                        ("Under review for conference publication", None)],
                 authors=["Justin Fu", "Sergey Levine", "Pieter Abbeel"],
                 image="res/onlinec_thumb.png",
                 description="One of the key challenges in applying reinforcement learning to complex robotic control tasks is the need to gather large amounts of experience in order to find an effective policy for the task at hand. Model-based reinforcement learning can achieve good sample efficiency, but requires the ability to learn a model of the dynamics that is good enough to learn an effective policy. In this work, we develop a model-based reinforcement learning algorithm that combines prior knowledge from previous tasks with online adaptation of the dynamics model. We encode the prior experience into a neural network dynamics model, and adapt it online by progressively refitting a local linear model of the dynamics.",
                 links=[("Website", "http://rll.berkeley.edu/icra2016onlinecontrol/"),
                        ("Video", "https://www.youtube.com/watch?v=P6DZorL6Oow"),
-                       ("Paper", "http://arxiv.org/pdf/1509.06841v1.pdf")
+                       ("PDF", "http://arxiv.org/pdf/1509.06841v1.pdf")
                 ]
             )
         </div>
 
         <a name="projects"></a>
         <hr>
-        <h2> Projects </h2>
+        <h3> Projects </h3>
         <hr>
 
         <div class="pyp-template"> 
             project_template(
                 title="Robust Object Pose Tracking for Robotics",
-                venue="CS280 (Computer Vision)",
+                venues=[("CS280 (Computer Vision)", None)],
                 image="res/cs280_thumb.png",
                 authors=["Chelsea Finn", "Justin Fu", "Nopphon Siranart"],
                 description="We propose a neural network based approach for visual 3D object tracking, a task important for applications such as robotic manipulation and video scene understanding. We experiment with different architectures (recurrent and feedforward) and artificial data augmentation (occlusions, background, and lighting variation) to improve prediction accuracy. We also experiment with batch normalization, a technique used to both regularize and speed up neural network training.",
@@ -70,7 +72,7 @@
         <div class="pyp-template"> 
             project_template(
                 title="Gesture Recognition from Accelerometer Data with Recurrent Neural Networks",
-                venue="VS265 (Neural Computation)",
+                venues=[("VS265 (Neural Computation)", None)],
                 image="res/vs265_thumb.png",
                 authors=["Justin Fu", "Siddartho Bhattacharya"],
                 description=LOREM_IPSUM,
@@ -83,7 +85,7 @@
         <div class="pyp-template"> 
             project_template(
                 title="Baxter drawing",
-                venue="EE125 (Robotics)",
+                venues=[("EE125 (Introduction to Robotics)", None)],
                 authors=["Justin Fu", "Hong Joo Kim", "Sara Seacat"],
                 description=LOREM_IPSUM,
                 links=[("Code", "https://github.com/justinjfu/renoir"),
@@ -94,8 +96,11 @@
 
         <a name="code"></a>
         <hr>
-        <h2> Code </h2>
+        <h3> Code </h3>
         <hr>
+
+        <a href='https://github.com/cbfinn/gps'>GPS</a> - A library for deep reinforcement learning (primarily based on guided policy search).
+        
       </div>
 
     </div><!-- /.container -->
@@ -104,9 +109,6 @@
     <div class="bottom_section">
         <div class="container">
             <div class="row">
-                <div class="row copyright">
-                    Copy
-                </div>
             </div>
         </div>
     </div>
