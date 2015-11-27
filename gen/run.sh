@@ -1,2 +1,4 @@
 #!/bin/bash
-python compile_template.py index.html.tem > ../index.html
+cd ..
+python gen/compile_template.py gen/index.html.tem > index.html
+cd gen

@@ -7,7 +7,7 @@ def hello_world():
     new_soup = BeautifulSoup('<div> Hello World! </div>', "html.parser")
     return new_soup
 
-def project_template(title="Title", description="Description", authors=None, links=None):
+def project_template(title="Title", venue=None, image=None, description='', abstract=None, authors=None, links=None):
     # Build links
     link_str = '<div class="project-links"> <ul>'
     for link_name, link_url in links:
@@ -16,32 +16,53 @@ def project_template(title="Title", description="Description", authors=None, lin
 
     # Build authors
     author_str = '<div class="project-authors"> <ul>'
-    for author in authors:
-        author_str += '<li>%s</li>' % (author)
+    for i, author in enumerate(authors):
+        if i==len(authors)-1:
+            author_str += '<li>%s</li>' % (author)
+        else:
+            author_str += '<li>%s,</li>' % (author)
     author_str += '</ul> </div> <!-- end project-authors -->'
+
+    # Build abstract
+    abstract_str = ''
+    if abstract:
+        abstract_str = '<b>Abstract</b>: '+abstract
+
+    # Build venue
+    venue_str = ''
+    if venue:
+        venue_str = venue
+
+    # Build image
+    image_str = ''
+    if image:
+        image_str = '<img width="100%%" src=%s>' % image
 
     proj_str = """
         <div class="project-item">
-            %(title)s
+            <h4>%(title)s</h4>
+            <h5>%(venue)s</h5>
             <div class="row">
-                <div class="col-md-6">
-                    Hello
+                <div class="col-md-6" style="overflow: hidden;">
+                    %(image)s
                 </div>
                 <div class="col-md-6">
                     %(authors)s
+                    %(abstract)s
                     %(description)s
                     %(links)s
                 </div>
             </div> <!-- end row -->
         </div> <!-- end project-item -->
-        """ % {'title':title, 'description':description, 'links': link_str, 'authors':author_str}
+        """ % {'title':title, 'image': image_str, 'venue':venue_str, 'abstract':abstract_str, 'description':description, 'links': link_str, 'authors':author_str}
     return BeautifulSoup(proj_str, 'html.parser')
 
-def main():
-    args = lambda : 0
-    args.fname = sys.argv[1]
-    with open(args.fname, 'r') as f:
+def load_file(fname):
+    with open(fname, 'r') as f:
         contents = f.read()
+    return template_contents(contents)
+
+def template_contents(contents):
     soup = BeautifulSoup(contents)
     templates = soup.find_all(class_="pyp-template")
     for templ in templates:
@@ -54,7 +75,12 @@ def main():
         else:
             new_soup = res
         templ.replaceWith(new_soup)
-    print soup.prettify()
+    return soup
+
+def main():
+    args = lambda : 0
+    args.fname = sys.argv[1]
+    print load_file(args.fname).prettify()
  
 if __name__ == "__main__":
     main()
