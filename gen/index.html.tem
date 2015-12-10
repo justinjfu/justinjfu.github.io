@@ -27,7 +27,7 @@
       <div class="starter-template">
         <a name="about"></a>
         <h1> Justin Fu </h1>
-        Hi! I am currently a Masters student in the <a href='http://www.cs.stanford.edu/'>CS department</a> at <a href='https://www.stanford.edu/'>Stanford University</a>. Before that, I completed my undergraduate degree in <a href='http://www.eecs.berkeley.edu/'>EECS</a> department at <a href='http://www.berkeley.edu/'>UC Berkeley</a>, under the supervision of professor <a href='http://www.cs.berkeley.edu/~pabbeel/'>Pieter Abbeel</a>.
+        Hi! I am currently a first-year Master's student in the <a href='http://www.cs.stanford.edu/'>CS department</a> at <a href='https://www.stanford.edu/'>Stanford University</a>. Before that, I completed my undergraduate degree in <a href='http://www.eecs.berkeley.edu/'>EECS</a> department at <a href='http://www.berkeley.edu/'>UC Berkeley</a>, under the supervision of professor <a href='http://www.cs.berkeley.edu/~pabbeel/'>Pieter Abbeel</a>.
 
         <a name="pubs"></a>
         <hr>
@@ -73,7 +73,7 @@
                 venues=[("VS265 (Neural Computation)", None)],
                 image="res/vs265_thumb.png",
                 authors=["Justin Fu", "Siddartho Bhattacharya"],
-                description=LOREM_IPSUM,
+                description="We apply recently popular Long Short-Term Memory (LSTM) neural network architecture to the problem of gesture recognition from accelerometer readings. Using approximately 5 minutes of manually collected data, we were able to achieve 80% accuracy across 6 different gestures.",
                 links=[("Code", "https://github.com/justinjfu/vs265_lstm"),
                        ("Writeup", "res/vs265_project.pdf")
                 ]
@@ -85,7 +85,7 @@
                 title="Baxter drawing",
                 venues=[("EE125 (Introduction to Robotics)", None)],
                 authors=["Justin Fu", "Hong Joo Kim", "Sara Seacat"],
-                description=LOREM_IPSUM,
+                description="We developed an algorithm for drawing images on paper given only a raw image as input. Our algorithm processes the image into strokes, and translates them into trajectories for a robot to execute. We were able to draw several cartoon pictures, although the noisy actuators and cameras on the Baxter robot we used somewhat limited the accuracy of the realizations of the images.",
                 links=[("Code", "https://github.com/justinjfu/renoir"),
                        ("Writeup", "https://sites.google.com/site/robotrenoir/")
                 ]
