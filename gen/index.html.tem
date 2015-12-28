@@ -87,7 +87,8 @@
                 authors=["Justin Fu", "Hong Joo Kim", "Sara Seacat"],
                 description="We developed an algorithm for drawing images on paper given only a raw image as input. Our algorithm processes the image into strokes, and translates them into trajectories for a robot to execute. We were able to draw several cartoon pictures, although the noisy actuators and cameras on the Baxter robot we used somewhat limited the accuracy of the realizations of the images.",
                 links=[("Code", "https://github.com/justinjfu/renoir"),
-                       ("Writeup", "https://sites.google.com/site/robotrenoir/")
+                       ("Writeup", "https://sites.google.com/site/robotrenoir/"),
+                       ("Video", "https://www.youtube.com/watch?v=H_u6VLEE6kA")
                 ]
             )
         </div>

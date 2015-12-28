@@ -44,24 +44,37 @@ def project_template(title="Title", venues=None, image=None, description='', abs
     image_str = ''
     if image:
         image_str = '<img width="100%%" src=%s>' % image
+        proj_str = """
+            <div class="project-item">
+                <h4>%(title)s</h4>
+                <h5>%(venue)s</h5>
+                <div class="row">
+                    <div class="col-md-6" style="overflow: hidden;">
+                        %(image)s
+                    </div>
+                    <div class="col-md-6">
+                        %(authors)s
+                        %(abstract)s
+                        %(description)s
+                        %(links)s
+                    </div>
+                </div> <!-- end row -->
+            </div> <!-- end project-item -->
+            """ % {'title':title, 'image': image_str, 'venue':venue_str, 'abstract':abstract_str, 'description':description, 'links': link_str, 'authors':author_str}
+    else:
+        proj_str = """
+            <div class="project-item">
+                <h4>%(title)s</h4>
+                <h5>%(venue)s</h5>
+                <div class="row">
+                        %(authors)s
+                        %(abstract)s
+                        %(description)s
+                        %(links)s
+                </div> <!-- end row -->
+            </div> <!-- end project-item -->
+            """ % {'title':title, 'venue':venue_str, 'abstract':abstract_str, 'description':description, 'links': link_str, 'authors':author_str}
 
-    proj_str = """
-        <div class="project-item">
-            <h4>%(title)s</h4>
-            <h5>%(venue)s</h5>
-            <div class="row">
-                <div class="col-md-6" style="overflow: hidden;">
-                    %(image)s
-                </div>
-                <div class="col-md-6">
-                    %(authors)s
-                    %(abstract)s
-                    %(description)s
-                    %(links)s
-                </div>
-            </div> <!-- end row -->
-        </div> <!-- end project-item -->
-        """ % {'title':title, 'image': image_str, 'venue':venue_str, 'abstract':abstract_str, 'description':description, 'links': link_str, 'authors':author_str}
     return BeautifulSoup(proj_str, 'html.parser')
 
 def load_file(fname):
