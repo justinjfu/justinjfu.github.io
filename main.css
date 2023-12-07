@@ -1,0 +1,88 @@
+a {
+    color: #1772d0;
+    text-decoration:none;
+}
+
+a:focus, a:hover {
+    color: #f09228;
+    text-decoration:none;
+}
+
+body,td,th,tr,p,a {
+    font-family: Georgia, Verdana, Helvetica, sans-serif;
+    font-size: 16px
+}
+
+body{
+    line-height: 1;
+}
+
+p{
+    margin-top: 20px;
+}
+
+hr {
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+.text-mono {
+  font-family: "Courier New", monospace;
+}
+.container-global{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.ul-no-bullet {
+    list-style-type: none;
+    padding: 0;
+}
+
+.ul-horizontal {
+    list-style-type: none;
+    overflow: hidden;
+    padding: 0;
+}
+
+.ul-horizontal>li {
+    float: left;
+    margin-right: 7px;
+}
+
+.pubs-title {
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 700
+}
+
+.pubs-venue{
+    font-style: italic;
+    font-weight: bold;
+    font-size: small;
+    color: #0000aa;
+}
+
+.pubs-entry{
+    margin-top: 20px;
+}
+
+.pubs-description{
+    color: #444444;
+    font-size: 14px;
+}
+
+.header-section{
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.bio{
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.bio-name {
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-size: 32px;
+}
