@@ -25,6 +25,7 @@ hr {
     margin-bottom: 4px;
     margin-top: 4px;
 }
+
 .text-mono {
   font-family: "Courier New", monospace;
 }
@@ -72,7 +73,7 @@ hr {
 }
 
 .header-section{
-    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-family: Georgia, Verdana, Helvetica, sans-serif;
     font-size: 22px;
     margin-bottom: 20px;
 }
@@ -83,6 +84,6 @@ hr {
 }
 
 .bio-name {
-    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-family: Georgia, Verdana, Helvetica, sans-serif;
     font-size: 32px;
 }
